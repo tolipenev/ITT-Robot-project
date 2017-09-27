@@ -1,0 +1,14 @@
+Initially the car does not move when the program is started.
+You can press X to end the program.
+
+CONTROLS:
+
+You can either press W or S to accelerate forward/backward
+or A / D to steer left or right.
+!!THE MOVEMENT/ACCELERATION IS TOGGLED!!
+
+Steering left/right is instant (with 1 keypress), irrespective of current acceleration or steering.
+When car is steering, accelerating in either direction is also instant.
+When the car is stopped, the acceleration in either direction is instant. When the car is already accelerating forward/backward, pressing the "opposite" key stops the car, and pressing the key again makes it move the opposite direction.
+
+Steering makes at least one of the wheels go forward at all times.
