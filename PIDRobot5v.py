@@ -17,7 +17,7 @@ lsOut = 24
 sensVCC = 23
 csOut = 22
 rsOut = 27
-#button = 5
+pin_startbutton = 5
 
 
 GPIO.setup(lmControl1, GPIO.OUT)
@@ -30,7 +30,7 @@ GPIO.setup(lsOut, GPIO.IN)
 GPIO.setup(sensVCC, GPIO.OUT)
 GPIO.setup(csOut, GPIO.IN)
 GPIO.setup(rsOut, GPIO.IN)
-#GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(pin_startbutton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 GPIO.setup(lmControl1, GPIO.LOW)
 GPIO.setup(lmControl2, GPIO.HIGH)
@@ -131,7 +131,15 @@ integral_max = 5
 integral_min = -5
 lastError = 0
 derivative = 0
+
+
+stop ()
+run(0,0)
+print "press Button to start"
+waitforbuttonpress(pin_startbutton)
+
 try:
+    print "starting code"
     while(True):
      #   input_state = GPIO.input(button)
     #if input_state == False:
@@ -150,5 +158,6 @@ try:
         lastError = error
         #print (Turn)
 except KeyboardInterrupt:
+    print "cleaningup"
     GPIO.cleanup()
 
