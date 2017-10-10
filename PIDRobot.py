@@ -75,7 +75,7 @@ def getError():
 
 def run(dcL, dcR):
     #the def that gets the enginge running by setting the dutycycle of the Left and Right Motors. 
-    #If the reieved value exceeds 100 or -100 the dutycycle is set to Target Power (Tp) 
+    #If the reieved value exceeds 100 or -100 the dutycycle is set to 100 
     try:        
         dcL = int(dcL)
         dcR = int(dcR)
